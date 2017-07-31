@@ -9,7 +9,7 @@ var apiRoute = express.Router()
 apiRoute.post('/getbuildings', function (req, res) {
 	var map = {
     "buildId": "998",
-    "buildName": "yuweyriuewryuew",
+    "buildName": "小区啦啦啦-5号",
     "leasedNum": "54",
     "totalNum": "27",
     "unleasedNum": "27"
@@ -44,7 +44,7 @@ apiRoute.post('/gethouses', function (req, res) {
       "houseNum": "54",
       "housePrice": "2007",
       "houseTenant": "小明",
-      "houseType": (i % 2) ? '1' : '0'
+      "leaseType": (i % 2) ? '1' : '0'
     });
   }
 
