@@ -65,6 +65,31 @@ apiRoute.post('/gethouses', function (req, res) {
 })
 
 
+// 保存房源
+apiRoute.post('/savehouse', function (req, res) {
+  setTimeout(function () {
+    res.json({
+      message: '保存成功',
+      status: 3001,
+      payload: {}
+    });
+  }, 300);
+})
+// 上传图片
+apiRoute.post('/uploadimage', function (req, res) {
+  setTimeout(function () {
+    res.json({
+      message: '上传成功',
+      status: 3001,
+      payload: {
+        url: '9999999999',
+        size: 1568,
+      }
+    });
+  }, 300);
+})
+
+
 // *********添加接口*********************************************************************
 
 module.exports = apiRoute;
