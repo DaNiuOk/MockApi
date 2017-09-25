@@ -22,9 +22,11 @@ app.all('*', function(req, res, next) {
 var apiFengRouter = require('./api_feng');
 var apiJiaRouter = require('./api_jia');
 var apiDemoRouter = require('./api_demo');
+var apiBossChartRouter = require('./api_bossChart');
 app.use('/api', apiFengRouter);
 app.use('/api', apiJiaRouter);
 app.use('/api', apiDemoRouter);
+app.use('/api', apiBossChartRouter);
 
 var server = app.listen(3030, function () {
     var port = server.address().port
