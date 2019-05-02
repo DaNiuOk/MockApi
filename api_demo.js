@@ -1,11 +1,10 @@
 
 var express = require('express');
-var app = express();
 var apiRoute = express.Router()
 
 // mock接口demo
+var movies = require('./data/movies.json');
 var data = require('./data/data.json');
-var movies = data.movies
 apiRoute.get('/movies', function (req, res) {
   console.log(req.query);
   setTimeout(function () {
@@ -13,7 +12,21 @@ apiRoute.get('/movies', function (req, res) {
       message: '成功',
       status: 3001,
       payload: {
-        data: movies
+        data: movies.movies
+      }
+    });
+  }, 300);
+})
+
+
+apiRoute.get('/data', function (req, res) {
+  console.log(req.query);
+  setTimeout(function () {
+    res.json({
+      message: '成功',
+      status: 3001,
+      payload: {
+        data: data
       }
     });
   }, 300);
